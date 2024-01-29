@@ -1,3 +1,4 @@
+#! /bin/bash
 echo "INFO: Starting a MySQL database server for tests"
 docker network create -d bridge test-network
 docker run --name mysql --network=test-network --hostname mysql  \
