@@ -17,5 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Run the test script
-      run: ./test.sh
+    - name: Run the bash tests
+      run: |
+        ./test.sh
