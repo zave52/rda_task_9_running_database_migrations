@@ -1,0 +1,21 @@
+name: Test
+
+on:
+  workflow_dispatch: 
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run the test script
+      run: ./test.sh
